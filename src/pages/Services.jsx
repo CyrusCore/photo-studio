@@ -61,11 +61,11 @@ const fadeInUp = { // Kita akan pakai ini untuk FAQ
 
 // --- Ikon Checkmark (Komponen kecil di dalam file ini) ---
 const CheckIcon = () => (
-  <svg 
-    className="w-5 h-5 text-brand-accent mr-2 flex-shrink-0" 
-    fill="none" 
-    stroke="currentColor" 
-    viewBox="0 0 24 24" 
+  <svg
+    className="w-5 h-5 text-brand-accent mr-2 flex-shrink-0"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -93,10 +93,10 @@ const AccordionItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <motion.div 
+    <motion.div
       className="border-b border-gray-300"
       // Animasi untuk setiap item FAQ
-      variants={fadeInUp} 
+      variants={fadeInUp}
     >
       <button
         onClick={() => setIsOpen(!isOpen)}
@@ -111,7 +111,7 @@ const AccordionItem = ({ question, answer }) => {
           <svg className="w-6 h-6 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" /></svg>
         </motion.div>
       </button>
-      
+
       {/* Panel Jawaban yang bisa Buka-Tutup */}
       <AnimatePresence>
         {isOpen && (
@@ -134,14 +134,14 @@ const AccordionItem = ({ question, answer }) => {
 
 export default function Services() {
   return (
-    <motion.div 
-    variants={pageTransition} 
-    initial="initial" 
-    animate="animate" 
-    exit="exit">
+    <motion.div
+      variants={pageTransition}
+      initial="initial"
+      animate="animate"
+      exit="exit">
       <div className="container mx-auto px-6 py-16">
         {/* --- JUDUL --- */}
-        <motion.h1 
+        <motion.h1
           className="text-4xl md:text-5xl font-bold text-center mb-4"
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -149,7 +149,7 @@ export default function Services() {
         >
           Layanan & Paket Kami
         </motion.h1>
-        <motion.p 
+        <motion.p
           className="text-lg text-gray-600 text-center max-w-lg mx-auto mb-16"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -167,13 +167,13 @@ export default function Services() {
             variants={popInFromLeft}
             viewport={{ once: true, amount: 0.3 }}
           >
-            <img 
-              src="https://images.unsplash.com/photo-1595152772106-a0f538760662?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" 
+            <img
+              src="https://images.unsplash.com/photo-1595152772106-a0f538760662?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80"
               alt="Self-Photo Studio Session"
-              className="rounded-lg shadow-xl object-cover w-full h-[450px]"
+              className="rounded-lg shadow-xl object-cover w-full h-auto aspect-video md:h-[450px]"
             />
           </motion.div>
-          
+
           {/* Detail Teks Self-Photo */}
           <motion.div
             initial="hidden"
@@ -195,8 +195,8 @@ export default function Services() {
               <li className="flex items-center"><CheckIcon /> Pilihan Background (Putih, Abu, Pink)</li>
               <li className="flex items-center"><CheckIcon /> Bebas Gunakan Properti Studio</li>
             </ul>
-            <Link 
-              to="/contact" 
+            <Link
+              to="/contact"
               className="bg-brand-accent text-white py-3 px-8 rounded-full text-lg font-semibold hover:bg-opacity-90 transition-all shadow-lg"
             >
               Book Self-Photo
@@ -227,8 +227,8 @@ export default function Services() {
               <li className="flex items-center"><CheckIcon /> Foto Produk & Komersial</li>
               <li className="flex items-center"><CheckIcon /> Termasuk Konsultasi Konsep</li>
             </ul>
-            <Link 
-              to="/contact" 
+            <Link
+              to="/contact"
               className="bg-brand-text text-white py-3 px-8 rounded-full text-lg font-semibold hover:bg-gray-700 transition-all shadow-lg"
             >
               Diskusikan Konsep Anda
@@ -243,17 +243,17 @@ export default function Services() {
             viewport={{ once: true, amount: 0.3 }}
             className="md:order-first" // PENTING: Ini memindah gambar ke KIRI di layout
           >
-            <img 
-              src="https://images.unsplash.com/photo-1522069213448-46760b35e076?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" 
+            <img
+              src="https://images.unsplash.com/photo-1522069213448-46760b35e076?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80"
               alt="Custom Session (Graduation)"
-              className="rounded-lg shadow-xl object-cover w-full h-[450px]"
+              className="rounded-lg shadow-xl object-cover w-full h-auto aspect-video md:h-[450px]"
             />
           </motion.div>
         </div>
         {/* --- SECTION FAQ --- */}
         <section className="py-20 mt-16 max-w-3xl mx-auto">
           {/* Judul Section */}
-          <motion.h2 
+          <motion.h2
             className="text-4xl font-bold text-center text-brand-text mb-12"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

@@ -124,7 +124,8 @@ export default function Contact() {
                 url="https://calendly.com/abramsatria7/new-meeting"
                 styles={{
                   height: '700px',
-                  minWidth: '320px'
+                  width: '100%',
+                  minWidth: '280px'
                 }}
               />
             </div>

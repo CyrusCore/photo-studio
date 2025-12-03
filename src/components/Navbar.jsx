@@ -40,12 +40,12 @@ export default function Navbar() {
 
       {/* Menu Mobile (Muncul saat diklik) */}
       {isOpen && (
-        <div className="md:hidden px-6 pb-4 flex flex-col space-y-3">
-          <Link to="/" className="block text-gray-600">Home</Link>
-          <Link to="/gallery" className="block text-gray-600">Gallery</Link>
-          <Link to="/services" className="block text-gray-600">Services</Link>
-          <Link to="/contact" className="block text-gray-600">Contact</Link>
-          <a href="#booking" className="bg-brand-accent text-white py-2 px-4 rounded-full text-center">
+        <div className="md:hidden px-6 pb-4 flex flex-col space-y-3 bg-white shadow-lg rounded-b-lg absolute w-full left-0 top-full border-t border-gray-100">
+          <Link to="/" className="block text-gray-600 hover:text-brand-accent py-2">Home</Link>
+          <Link to="/gallery" className="block text-gray-600 hover:text-brand-accent py-2">Gallery</Link>
+          <Link to="/services" className="block text-gray-600 hover:text-brand-accent py-2">Services</Link>
+          <Link to="/contact" className="block text-gray-600 hover:text-brand-accent py-2">Contact</Link>
+          <a href="#booking" className="bg-brand-accent text-white py-2 px-4 rounded-full text-center mt-2 hover:bg-opacity-90">
             Book Now
           </a>
         </div>

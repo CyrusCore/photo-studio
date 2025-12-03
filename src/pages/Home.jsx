@@ -114,15 +114,15 @@ const servicesStaggerUpdated = {
 const bounceUpUpdated = {
   hidden: { opacity: 0, y: 100, scale: 0.9 },
   visible: { opacity: 1, y: 0, scale: 1, transition: { type: "spring", stiffness: 100, damping: 12 } }
-};  
+};
 
 
 // --- Komponen HOME ---
 const StarIcon = ({ filled = true }) => (
-  <svg 
+  <svg
     className={`w-5 h-5 ${filled ? 'text-yellow-400' : 'text-gray-300'}`}
-    fill="currentColor" 
-    viewBox="0 0 20 20" 
+    fill="currentColor"
+    viewBox="0 0 20 20"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.971a1 1 0 00.95.69h4.182c.969 0 1.371 1.24.588 1.81l-3.383 2.456a1 1 0 00-.364 1.118l1.287 3.971c.3.921-.755 1.688-1.54 1.118l-3.383-2.456a1 1 0 00-1.175 0l-3.383 2.456c-.784.57-1.838-.197-1.54-1.118l1.287-3.971a1 1 0 00-.364-1.118L2.28 9.398c-.783-.57-.38-1.81.588-1.81h4.182a1 1 0 00.95-.69L9.049 2.927z" />
@@ -157,29 +157,29 @@ export default function Home() {
       animate="animate"
       exit="exit"
     >
-      
+
       {/* 1. HERO SECTION */}
       <section className="h-[90vh] min-h-[600px] flex items-center justify-center relative text-white">
         <div className="absolute inset-0 bg-black/40 z-10"></div>
-        <img 
-          src="https://images.unsplash.com/photo-1599749293111-a590f0d24b6f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" 
+        <img
+          src="https://images.unsplash.com/photo-1599749293111-a590f0d24b6f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
           alt="NOTI Studio Background"
           className="absolute inset-0 w-full h-full object-cover"
         />
 
-        <motion.div 
+        <motion.div
           className="z-20 text-center p-6"
           initial="hidden"
           animate="visible"
           variants={heroStagger} // Gunakan varian stagger
         >
-          <motion.h1 
-            className="text-5xl md:text-7xl font-bold tracking-tight mb-4"
+          <motion.h1
+            className="text-4xl md:text-7xl font-bold tracking-tight mb-4"
             variants={dropIn} // Gunakan varian dropIn
           >
             Capture Your Moment, <br />
           </motion.h1>
-          <motion.p 
+          <motion.p
             className="text-lg md:text-xl max-w-2xl mx-auto mb-8"
             variants={dropIn} // Gunakan varian dropIn
           >
@@ -187,8 +187,8 @@ export default function Home() {
             Modern, minimalist, and perfectly you.
           </motion.p>
           <motion.div variants={dropIn}> {/* Gunakan varian dropIn */}
-            <motion.a 
-              href="#booking" 
+            <motion.a
+              href="#booking"
               className="bg-brand-accent text-white py-3 px-8 rounded-full text-lg font-semibold hover:bg-opacity-90 transition-all shadow-lg"
               whileHover={{ scale: 1.05 }} // Tambahkan efek hover
               whileTap={{ scale: 0.95 }}   // Tambahkan efek klik
@@ -210,13 +210,13 @@ export default function Home() {
             viewport={{ once: true, amount: 0.3 }} // Muncul saat 30% terlihat
             transition={{ duration: 0.8 }}
           >
-            <img 
+            <img
               src="https://images.unsplash.com/photo-1520338801618-9f3b33362a26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
               alt="Interior NOTI Studio"
               className="rounded-lg shadow-xl object-cover w-full h-full max-h-[500px]"
             />
           </motion.div>
-          
+
           {/* Teks 'About' */}
           <motion.div
             initial="hidden"
@@ -235,7 +235,7 @@ export default function Home() {
             <p className="text-gray-600 mb-6 leading-relaxed">
               Kami menawarkan dua layanan utama: **Self-Photo Studio** untuk sesi foto yang bebas, seru, dan privat, serta **Custom Session** untuk kebutuhan khusus seperti foto wisuda, keluarga, atau produk dengan arahan profesional.
             </p>
-            <Link 
+            <Link
               to="/gallery"
               className="text-brand-accent font-semibold hover:underline"
             >
@@ -264,7 +264,7 @@ export default function Home() {
           </motion.div>
 
           {/* Kontainer Kartu Layanan (untuk stagger) */}
-          <motion.div 
+          <motion.div
             className="grid md:grid-cols-2 gap-8"
             initial="hidden"
             whileInView="visible"
@@ -272,7 +272,7 @@ export default function Home() {
             viewport={{ once: true, amount: 0.3 }}
           >
             {/* Service 1: Self-Photo */}
-            <motion.div 
+            <motion.div
               className="bg-brand-beige p-8 rounded-lg shadow-lg text-left"
               variants={bounceUp} // Gunakan bounceUp
             >
@@ -280,16 +280,16 @@ export default function Home() {
               <p className="text-gray-600 mb-6">
                 Ekspresikan dirimu sebebas mungkin! Kamu adalah fotografernya. Dapatkan hasil foto instan berkualitas tinggi dalam sesi privat yang seru.
               </p>
-              <Link 
-                to="/services" 
+              <Link
+                to="/services"
                 className="bg-brand-accent text-white py-2 px-5 rounded-full hover:bg-opacity-90 transition-all font-medium"
               >
                 Lihat Paket Self-Photo
               </Link>
             </motion.div>
-            
+
             {/* Service 2: Custom Session */}
-            <motion.div 
+            <motion.div
               className="bg-gray-700 text-white p-8 rounded-lg shadow-lg text-left"
               variants={bounceUp} // Gunakan bounceUp
             >
@@ -297,64 +297,64 @@ export default function Home() {
               <p className="text-gray-200 mb-6">
                 Untuk momen spesial. Sesi wisuda, keluarga, *pre-wedding*, atau *fashion*. Tim profesional kami akan mewujudkan konsep apa pun yang Anda inginkan.
               </p>
-              <Link 
-                to="/services#custom" 
+              <Link
+                to="/services#custom"
                 className="bg-white text-brand-text py-2 px-5 rounded-full hover:bg-opacity-90 transition-all font-medium"
               >
                 Diskusi Konsep
               </Link>
             </motion.div>
           </motion.div>
-        {/* Testimonials Section */}
-        <section className="py-20 bg-brand-beige">
-        <div className="container mx-auto px-6 text-center">
-          
-          {/* Judul Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ type: "spring", stiffness: 100, damping: 10, delay: 0.1 }}
-          >
-            <h2 className="text-4xl font-bold text-brand-text mb-4">
-              What Our Clients Say
-            </h2>
-            <p className="text-lg text-gray-600 max-w-xl mx-auto mb-12">
-              Cerita nyata dari mereka yang telah mengabadikan momen bersama kami.
-            </p>
-          </motion.div>
+          {/* Testimonials Section */}
+          <section className="py-20 bg-brand-beige">
+            <div className="container mx-auto px-6 text-center">
 
-          {/* Kontainer Kartu Testimoni */}
-          <motion.div 
-            className="grid md:grid-cols-3 gap-8"
-            initial="hidden"
-            whileInView="visible"
-            variants={servicesStaggerUpdated} // Kita gunakan lagi varian stagger dari services
-            viewport={{ once: true, amount: 0.3 }}
-          >
-            {testimonials.map((testi) => (
-              <motion.div 
-                key={testi.id}
-                className="bg-brand-white p-8 rounded-lg shadow-lg text-left"
-                variants={bounceUpUpdated} // Dan varian bounceUp
+              {/* Judul Section */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ type: "spring", stiffness: 100, damping: 10, delay: 0.1 }}
               >
-                {/* Rating Bintang */}
-                <div className="flex mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <StarIcon key={i} filled={i < testi.rating} />
-                  ))}
-                </div>
-                
-                {/* Kutipan / Quote */}
-                <p className="text-gray-600 mb-6 italic">"{testi.quote}"</p>
-                
-                {/* Nama Klien */}
-                <p className="font-bold text-brand-text">- {testi.name}</p>
+                <h2 className="text-4xl font-bold text-brand-text mb-4">
+                  What Our Clients Say
+                </h2>
+                <p className="text-lg text-gray-600 max-w-xl mx-auto mb-12">
+                  Cerita nyata dari mereka yang telah mengabadikan momen bersama kami.
+                </p>
               </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+
+              {/* Kontainer Kartu Testimoni */}
+              <motion.div
+                className="grid md:grid-cols-3 gap-8"
+                initial="hidden"
+                whileInView="visible"
+                variants={servicesStaggerUpdated} // Kita gunakan lagi varian stagger dari services
+                viewport={{ once: true, amount: 0.3 }}
+              >
+                {testimonials.map((testi) => (
+                  <motion.div
+                    key={testi.id}
+                    className="bg-brand-white p-8 rounded-lg shadow-lg text-left"
+                    variants={bounceUpUpdated} // Dan varian bounceUp
+                  >
+                    {/* Rating Bintang */}
+                    <div className="flex mb-4">
+                      {[...Array(5)].map((_, i) => (
+                        <StarIcon key={i} filled={i < testi.rating} />
+                      ))}
+                    </div>
+
+                    {/* Kutipan / Quote */}
+                    <p className="text-gray-600 mb-6 italic">"{testi.quote}"</p>
+
+                    {/* Nama Klien */}
+                    <p className="font-bold text-brand-text">- {testi.name}</p>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </div>
+          </section>
         </div>
       </section>
 
