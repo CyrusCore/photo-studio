@@ -206,7 +206,7 @@ export default function Contact() {
             Buka Google Maps -> Cari lokasi Anda -> Share -> Embed a map -> Copy HTML
           */}
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322123!2d106.819561314769!3d-6.194741395514695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5390917b759%3A0x6b45e6735624040a!2sMonumen%20Nasional!5e0!3m2!1sen!2sid!4v1677610000000!5m2!1sen!2sid"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2776.1339855907904!2d112.59306391511223!3d-7.965334808762677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7883002954c577%3A0xa357b10bdba8c004!2sNoti%20Studio!5e0!3m2!1sid!2sid!4v1764773404215!5m2!1sid!2sid"
             width="100%"
             height="450"
             style={{ border: 0 }}
