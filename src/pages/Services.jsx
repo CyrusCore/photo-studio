@@ -205,7 +205,7 @@ export default function Services() {
         </div>
 
         {/* --- PAKET 2: CUSTOM SESSION --- */}
-        <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center mt-20 bg-brand-beige p-10 rounded-lg">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center mt-20 bg-brand-beige p-6 md:p-10 rounded-lg">
           {/* Detail Teks Custom (Muncul di KIRI) */}
           <motion.div
             initial="hidden"
@@ -229,7 +229,7 @@ export default function Services() {
             </ul>
             <Link
               to="/contact"
-              className="bg-brand-text text-white py-3 px-8 rounded-full text-lg font-semibold hover:bg-gray-700 transition-all shadow-lg"
+              className="bg-brand-text text-white py-3 px-6 md:px-8 rounded-full text-base md:text-lg font-semibold hover:bg-gray-700 transition-all shadow-lg inline-block text-center"
             >
               Diskusikan Konsep Anda
             </Link>
