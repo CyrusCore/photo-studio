@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body, #root {
+  font-family: 'Poppins', sans-serif;
+  background-color: #FBFBFB; /* Latar utama kita */
+  color: #333333; /* Teks utama kita */
+}
+body, #root {
+  overflow-x: hidden;
+}
+
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE dan Edge */
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, dan WebKit */
+  width: 0;
+  height: 0;
+}
+
+@layer components {
+  a, 
+  button, 
+  input, 
+  textarea,
+  [tabindex="0"] {
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent focus-visible:ring-offset-2 focus-visible:ring-offset-brand-white rounded-sm transition-all duration-150;
+  }
+
+  /* Perbaikan kecil agar ring di input terlihat pas */
+  input, 
+  textarea {
+    @apply focus-visible:ring-offset-0;
+  }
+}
